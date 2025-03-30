@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub SOA - Tải Hiệu Ứng Sub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="text-center py-6 bg-gray-800 shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold text-[#d62839]">Sub SOA</h1>
+        <p class="text-gray-300 text-sm md:text-lg">Kho hiệu ứng sub đẹp mắt</p>
+    </header>
+
+    <!-- Danh sách hiệu ứng -->
+    <main class="p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card Hiệu Ứng -->
+            <div class="bg-gray-800 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+                <img src="thumbnail1.jpg" alt="Hiệu ứng 1" class="w-full h-24 object-cover rounded-md">
+                <h2 class="text-xl font-semibold text-[#d62839] mt-2">Hiệu ứng 1</h2>
+                <p class="text-gray-400">Mô tả hiệu ứng sub đặc biệt</p>
+                <button onclick="openPopup('Hiệu ứng 1')" class="mt-2 inline-block px-4 py-2 bg-[#d62839] rounded-lg text-white hover:bg-red-600">Tải ngay</button>
+            </div>
+            <div class="bg-gray-800 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+                <img src="thumbnail2.jpg" alt="Hiệu ứng 2" class="w-full h-24 object-cover rounded-md">
+                <h2 class="text-xl font-semibold text-[#d62839] mt-2">Hiệu ứng 2</h2>
+                <p class="text-gray-400">Mô tả hiệu ứng sub lung linh</p>
+                <button onclick="openPopup('Hiệu ứng 2')" class="mt-2 inline-block px-4 py-2 bg-[#d62839] rounded-lg text-white hover:bg-red-600">Tải ngay</button>
+            </div>
+            <div class="bg-gray-800 rounded-xl p-4 shadow-lg hover:scale-105 transition">
+                <img src="thumbnail3.jpg" alt="Hiệu ứng 3" class="w-full h-24 object-cover rounded-md">
+                <h2 class="text-xl font-semibold text-[#d62839] mt-2">Hiệu ứng 3</h2>
+                <p class="text-gray-400">Mô tả hiệu ứng sub động</p>
+                <button onclick="openPopup('Hiệu ứng 3')" class="mt-2 inline-block px-4 py-2 bg-[#d62839] rounded-lg text-white hover:bg-red-600">Tải ngay</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-80 text-center">
+            <h2 id="popup-title" class="text-xl font-bold text-[#d62839]"></h2>
+            <p class="text-gray-300 mt-2">Hướng dẫn tải file và danh sách các file cần tải:</p>
+            <ul class="text-left mt-2 text-gray-400">
+                <li>- File 1: <a href="#" class="text-[#d62839] underline">Download</a></li>
+                <li>- File 2: <a href="#" class="text-[#d62839] underline">Download</a></li>
+            </ul>
+            <button onclick="closePopup()" class="mt-4 px-4 py-2 bg-[#d62839] text-white rounded-lg hover:bg-red-600">Đóng</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-8 bg-gray-800">
+        <p class="text-gray-400">&copy; 2025 Sub SOA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openPopup(effectName) {
+            document.getElementById('popup-title').innerText = effectName;
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
